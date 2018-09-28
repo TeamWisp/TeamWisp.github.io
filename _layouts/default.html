@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+  <body>
+        {% include header.html %}
+        <div class="wrapper">
+            <div class="vertical-nav">
+                <li><a id="page-link" class="page-link" href="{{ site.url }}">Introduction</a></li>
+                {% for page in site.common %}
+                <li><a id="page-link" class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
+                {% endfor %}
+
+                <!--<h1>Common</h1>
+                {% for page in site.common %}
+                <li><a id="page-link" class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>     
+                {% endfor %}-->
+
+                <br><br>
+
+                <h1>Engine</h1>
+                {% for page in site.engine %}
+                <li><a id="page-link" class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
+                {% endfor %}
+
+                <h1>Renderer</h1>
+                {% for page in site.renderer %}
+                <li><a id="page-link" class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
+                {% endfor %}
+            </div>
+            <div class="page-content-wrapper">
+                <div class="page-content">
+                    <h1>{{ page.title }}</h1>
+                    {{ content }}
+                </div>
+            </div>
+            <!--{% include footer.html %}-->
+        </div>
+  </body>
+</html>

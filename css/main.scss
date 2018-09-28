@@ -1,0 +1,41 @@
+---
+---
+@charset "utf-8";
+
+@font-face {
+    font-family: 'Open Sans', sans-serif;
+} 
+
+$base-font-family: Open Sans;
+$base-font-family:'Merriweather', serif;
+$base-font-family: 'Source Sans Pro', sans-serif;
+$base-font-line-spacing: 1px;
+
+$theme-color: #458890;
+
+$bg-color: rgb(233, 233, 233);
+$content-bg-color: rgb(255, 255, 255);
+$header-bg-color: $theme-color;
+$header-title-color: rgb(255, 255, 255);
+$header-title-color-hover: rgb(200, 233, 255);
+$header-sub-title-color: rgb(223, 223, 223);
+$vnav-bg-color: rgb(34, 34, 34);
+$vnav-title-color: $header-title-color;
+$vnav-link-color: $header-sub-title-color;
+$vnav-link-color-hover: #fff;
+$vnav-bg-link-color: content-bg-color;
+$vnav-bg-link-color-hover: $theme-color;
+$vnav-title-size: 14px;
+$vnav-link-size: 14px;
+
+$default-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+$header-title-size: 24px;
+
+$link-anim-time: 0.1s;
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+    "base",
+	"syntax-highlighting"
+;

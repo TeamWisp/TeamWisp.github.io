@@ -1,0 +1,142 @@
+body, html {
+    padding: 0;
+    margin: 0;
+    font-family: $base-font-family;
+    letter-spacing: $base-font-line-spacing;
+    background-color: $bg-color;
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper
+{
+    margin-top: 50px; /* absolute header offset */
+    width: 100%;
+    height: auto;
+    display: flex;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+
+.header
+{
+    z-index: 10;
+    width: 100%;
+    height: 50px;
+    background-color: $header-bg-color;
+    line-height: 50px;
+    box-shadow: $default-shadow;
+}
+
+.header-title
+{
+    font-size: $header-title-size;
+    color: $header-title-color;
+    margin: 0px 10px 0px 10px;
+
+    -webkit-transition: color $link-anim-time ease;
+    -moz-transition: color $link-anim-time ease;
+    -o-transition: color $link-anim-time ease;
+    transition: color $link-anim-time ease;
+}
+
+.github-link
+{
+    height: 30px;
+    float: right;
+    margin: 10px;
+}
+
+.header-title:hover
+{
+    color: $header-title-color-hover;
+}
+
+.vertical-nav
+{
+    background-color: $vnav-bg-color;
+    height: 100%;
+    box-shadow: $default-shadow;
+    overflow: hidden;
+    max-width: 400px;
+}
+
+.vertical-nav li
+{
+    padding-left: 20px;
+    margin-right: -20px;
+    white-space: nowrap;
+    text-decoration: none;
+    list-style: none;
+    color: $vnav-link-color;
+    background-color: $vnav-bg-color;
+    width: 100%;
+    $height: 35px;
+    height: $height;
+    line-height: $height;
+    display: inline-block;
+
+    -webkit-transition: background-color $link-anim-time ease;
+    -moz-transition: background-color $link-anim-time ease;
+    -o-transition: background-color $link-anim-time ease;
+    transition: background-color $link-anim-time ease;
+}
+
+.vertical-nav li:hover
+{
+    background-color: $vnav-bg-link-color-hover;
+}
+
+.vertical-nav li a
+{
+    color: $vnav-link-color;
+    font-size: $vnav-link-size;
+    text-decoration: none;
+}
+
+.vertical-nav li:hover a
+{
+    color: $vnav-link-color-hover;
+}
+
+.vertical-nav h1 {
+    letter-spacing: $base-font-line-spacing;
+    color: $vnav-title-color; 
+    font-size: $vnav-title-size;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.page-content-wrapper
+{
+    display: flex;
+    width: 100%;
+    height: -webkit-calc(100% - (30 * 2));
+    height: 100%;
+}
+
+.page-content
+{
+    background-color: $content-bg-color;
+    box-shadow: $default-shadow;
+    overflow: hidden;
+
+    $margin: 30px;
+    padding: 0 30px 0 30px;
+    height: -webkit-calc(100% - (30 * 2));
+    max-width: 800px;
+    width: 100%;
+    margin: $margin;
+}
+
+.page-content h1 {
+    width: 100%;
+    text-align: center; 
+}
+
+.site-footer
+{
+    border-top: black 1px;
+}
