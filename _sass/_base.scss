@@ -60,6 +60,7 @@ body, html {
     box-shadow: $default-shadow;
     overflow: hidden;
     max-width: 400px;
+	bottom: 0;
 }
 
 .vertical-nav li
@@ -111,20 +112,18 @@ body, html {
 
 .page-content-wrapper
 {
-    display: flex;
     width: 100%;
-    height: -webkit-calc(100% - (30 * 2));
-    height: 100%;
+    //height: -webkit-calc(100% - (30 * 2));
+    min-height: 100%;
 }
 
 .page-content
 {
     background-color: $content-bg-color;
     box-shadow: $default-shadow;
-    overflow: hidden;
 
     $margin: 30px;
-    padding: 0 30px 0 30px;
+    padding: 30px 30px 30px 30px;
     height: -webkit-calc(100% - (30 * 2));
     max-width: 800px;
     width: 100%;

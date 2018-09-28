@@ -4,7 +4,7 @@
   <body>
         {% include header.html %}
         <div class="wrapper">
-            <div class="vertical-nav">
+            <div class="vertical-nav" id="max-page-height">
                 <li><a id="page-link" class="page-link" href="{{ site.url }}">Introduction</a></li>
                 {% for page in site.common %}
                 <li><a id="page-link" class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
@@ -33,6 +33,12 @@
                     {{ content }}
                 </div>
             </div>
+
+			<script>
+				var vnav = document.getElementById("max-page-height");
+				var new_height = $( document ).height() - 50;
+				vnav.style.height = String(new_height) + "px";
+			</script>
             <!--{% include footer.html %}-->
         </div>
   </body>
