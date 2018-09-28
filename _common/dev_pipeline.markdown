@@ -5,7 +5,7 @@ date:   2018-09-27 11:43:16 +0200
 category: common
 ---
 
-## New Code & Major Bug Fixes
+## New Code / Major Bug Fixes / Refactoring
 ### 1. Create Branch
 
 1. Update **development** and/or **feature** branches to the latest version.
@@ -28,6 +28,7 @@ category: common
 1. Rebase branch onto master.
 1. Squash any `[WIP]` commits.
 	- Try to prevent submitting `[WIP]` commits to the feature branch.
+1. Refactory if nessessary.
 1. Push changes/branch up to Github.
 
 ### 4. Pull Request
@@ -59,6 +60,7 @@ category: common
 1. Checkout your target branch.
 1. Make Changes
 1. Commit Changes
+	- Prefix the message with: `[FIX]`.
 2. Push Changes
 
 ## Other Notes
