@@ -5,7 +5,7 @@
         {% include header.html %}
         <div class="wrapper">
             <div class="vertical-nav">
-                <li><a id="page-link" class="page-link" href="{{ site.baseurl }}">Introduction</a></li>
+                <li><a id="page-link" class="page-link" href="{{ site.url }}">Introduction</a></li>
                 {% for page in site.common %}
                 <li><a id="page-link" class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
                 {% endfor %}
