@@ -400,6 +400,8 @@ std::shared_ptr<MyClass> myobj = make_shared<MyClass>();
 // myobj is automatically freed for you whenever it is no longer used.
 ```
 
+Please no that a smart pointer only shoulbe be passed by reference or const reference if you modify its lifetime. Else just use a raw pointer for compatibility reasons. See the C++ Core Guidelines for more information.
+
 ### Avoid global data
 ... this includes singleton objects
 
