@@ -73,6 +73,11 @@ I recommend to write unit tests before writing the feature. This gives you a cle
 
 ## Style
 
+#### Folder Structure
+
+We are using folders instead of filters since we possibly want to target other IDE's than Visual Studio.
+All folders should be named in `snake_case` style.
+
 #### Naming Convention
 
  * Types and functions start with capitals: `MyClass` & `MyMethod` *(PascalCase)*
