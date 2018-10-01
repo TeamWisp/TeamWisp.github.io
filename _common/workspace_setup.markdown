@@ -2,13 +2,15 @@
 layout: post
 title:  "Setting Up Your Workspace"
 category: common
-permalink: /code_reviews/
+permalink: /workspace_setup/
+weight: 0
 ---
 
 ## Prerequisites
 
 * Git
 * Visual Studio 15 2017
+* [Static Code Analyzer]({{site.url}}/code_standards/#automated-code-analysis) *(or MSVC's `/analyze`)*
 * FMOD *(Optional)*
 
 ## Installation

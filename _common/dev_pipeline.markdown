@@ -3,6 +3,8 @@ layout: post
 title:  "Development Pipeline"
 date:   2018-09-27 11:43:16 +0200
 category: common
+weight: 5
+permalink: /dev_pipeline/
 ---
 
 ## New Code / Major Bug Fixes / Refactoring

@@ -3,14 +3,16 @@ layout: post
 title:  "Coding Standards"
 date:   2018-09-27 11:43:16 +0200
 category: common
+permalink: /code_standards/
+weight: 10
 ---
 
 ## Table of Content
 
-* [Automated Code Analysis]()
-* [Style]()
-* [Performance and Safety]()
-* [References and Further Reading]()
+* [Automated Code Analysis](#automated-code-analysis)
+* [Style](#style)
+* [Performance and Safety](#performance-and-safety)
+* [References and Further Reading](#references-and-further-reading)
 
 ## Automated Code Analysis
 
@@ -37,7 +39,7 @@ MSVC has fewer warning options, so all warnings should be enabled: `/W4`. `/Wall
 
 ### Static Analyzers
 
-Static analyzers look for errors that compilers do not look for, such as potential performance and memory issues.
+Static analyzers look for errors that compilers do not look for, such as potential performance and memory issues. ***Every programmer of the team is to use atleast 1 static analyzer when writing code***.
 
 #### Cppcheck
 
@@ -57,6 +59,7 @@ A coverage analysis tool shall be run when tests are executed to make sure the e
 
 The most likely candidate for a coverage visualization is the [lcov](http://ltp.sourceforge.net/coverage/lcov.php) project. A secondary option is [coveralls](https://coveralls.io/), which is free for open source projects.
 
+This is not required for every programmer to use. We'll run this every now and than to see where we lack testing.
 
 ### Ignoring Warnings
 
@@ -65,27 +68,17 @@ If it is determined by team consensus that the compiler or analyzer is warning o
 ### Unit Tests
 
 There should be a test enabled for every feature or bug fix that is committed. See also "Code Coverage Analysis."
+I recommend to write unit tests before writing the feature. This gives you a clear guideline for how you should implement said feature.
+***Every team member should actively help increase test coverage***
 
 ## Style
 
-Style guidelines are not overly strict. The important thing is that code is clear and readable with an appropriate amount of whitespace and reasonable length lines. A few best practices are also mentioned.
+#### Naming Convention
 
-### Descriptive and Consistent Naming
-
-C++ allows for arbitrary length identifier names, so there's no reason to be terse when naming variables. Use descriptive names, and be consistent in the style
-
- * `CamelCase`
- * `snake_case`
- 
-are common examples. snake_case has the advantage that it can also work with spell checkers, if desired.
-
-#### Common C++ Naming Conventions
-
- * Types start with capitals: `MyClass`
- * functions and variables start with lower case: `myMethod`
- * constants are all capital: `const int PI=3.14159265358979323;`
-
-*Note that the C++ standard does not follow any of these guidelines. Everything in the standard is lowercase only.*
+ * Types and functions start with capitals: `MyClass` & `MyMethod` *(PascalCase)*
+ * variables start with lower case: `unsigned myVarianble = 0;` *(lowerCamelCase)*
+ * static global constants are all capital: `const int PI=3.1415;`
+ * Enum types are all capitals: `enum class Weather { RAINY, COUDY };`
 
 #### Distinguish Private Object Data
 
@@ -106,7 +99,7 @@ public:
   {
   }
   
-  int getData() const
+  int GetData() const
   {
     return m_data;
   }
@@ -131,7 +124,7 @@ Comment blocks should use `//`, not `/* */`. Using `//` makes it much easier to 
 
 ```cpp
 // this function does something
-int myFunc()
+int MyFunc()
 {
 }
 ```
@@ -141,7 +134,7 @@ To comment out this function block during debugging we might do:
 ```cpp
 /*
 // this function does something
-int myFunc()
+int MyFunc()
 {
 }
 */
@@ -176,7 +169,7 @@ Tabs are not allowed, and a mixture of tabs and spaces is strictly forbidden. Mo
 
 ```cpp
 // Good Idea
-int myFunction(bool t_b)
+int MyFunction(bool t_b)
 {
   if (t_b)
   {
@@ -217,12 +210,12 @@ for (int i = 0; i < 15; ++i) {
 ```cpp
 // Bad Idea
 // hard to follow
-if (x && y && myFunctionThatReturnsBool() && caseNumber3 && (15 > 12 || 2 < 3)) { 
+if (x && y && MyFunctionThatReturnsBool() && caseNumber3 && (15 > 12 || 2 < 3)) { 
 }
 
 // Good Idea
 // Logical grouping, easier to read
-if (x && y && myFunctionThatReturnsBool() 
+if (x && y && MyFunctionThatReturnsBool() 
     && caseNumber3 
     && (15 > 12 || 2 < 3)) { 
 }
@@ -358,6 +351,8 @@ for (int i = 0; i < 15; ++i)
 Exceptions cannot be ignored. Return values, such as using `boost::optional`, can be ignored and if not checked can cause crashes or memory errors. An exception, on the other hand, can be caught and handled. Potentially all the way up the highest level of the application with a log and automatic restart of the application.
 
 Stroustrup, the original designer of C++, [makes this point](http://www.stroustrup.com/bs_faq2.html#exceptions-why) much better than I ever could.
+
+***However do not be discouraged from using std::optional***. In situations it can be very helpfull. But never use it when a error occurs that is not expected to occur.
 
 ### Avoid raw memory access
 

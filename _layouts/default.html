@@ -6,7 +6,8 @@
         <div class="wrapper">
             <div class="vertical-nav" id="max-page-height">
                 <li><a id="page-link" class="page-link" href="{{ site.url }}">Introduction</a></li>
-                {% for page in site.common %}
+				{% assign pages = site.common | sort:"weight" %}
+                {% for page in pages %}
                 <li><a id="page-link" class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
                 {% endfor %}
 
