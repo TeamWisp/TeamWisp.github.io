@@ -342,7 +342,7 @@ Compiler definitions and macros are replaced by the pre-processor before the com
 namespace my_project {
   class Constants {
   public:
-    static const double PI = 3.14159;
+    static const constexpr double PI = 3.14159;
   }
 }
 
