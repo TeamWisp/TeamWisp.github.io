@@ -155,26 +155,49 @@ Header files must contain an distinctly named include guard to avoid problems wi
 #ifndef MYPROJECT_MYCLASS_HPP
 #define MYPROEJCT_MYCLASS_HPP
 
-namespace MyProject {
-class MyClass {
-};
+namespace MyProject
+{
+
+  class MyClass
+  {
+  };
+
 }
 
 #endif
 ```
 
-### 2 spaces indent level. 
+### Put braces on a new line
 
-Tabs are not allowed, and a mixture of tabs and spaces is strictly forbidden. Modern autoindenting IDEs and editors require a consistent standard to be set.
+Put your braces on a new line.
+
+```cpp
+// Good Idea
+int MyFuncton()
+{
+
+}
+```
+
+```cpp
+// Bad Idea
+int MyFuncton() {
+  
+}
+```
+
+### 4 spaces indent level. 
+
+Spaces are not allowed, and a mixture of tabs and spaces is strictly forbidden. Modern autoindenting IDEs and editors require a consistent standard to be set.
 
 ```cpp
 // Good Idea
 int MyFunction(bool t_b)
 {
-  if (t_b)
-  {
-    // do something
-  }
+    if (t_b)
+    {
+        // do something
+    }
 }
 ```
 
