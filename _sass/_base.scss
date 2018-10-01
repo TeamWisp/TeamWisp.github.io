@@ -41,6 +41,12 @@ body, html {
     transition: color $link-anim-time ease;
 }
 
+.header-sub-title
+{
+    font-size: $header-sub-title-size;
+    color: $header-sub-title-color;
+}
+
 .github-link
 {
     height: 30px;
@@ -135,11 +141,15 @@ body, html {
     text-align: center; 
 }
 
-.important
+.page-content a
 {
-    font-weight: bold;
-    color: rgb(66, 0, 0);
-    font-style: italic;
+    color: $link-color;
+    text-decoration: none;
+}
+
+.page-content a:hover
+{
+    color: $link-color-hover;
 }
 
 .site-footer

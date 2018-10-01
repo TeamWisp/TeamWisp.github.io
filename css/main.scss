@@ -12,6 +12,8 @@ $base-font-family: 'Source Sans Pro', sans-serif;
 $base-font-line-spacing: 1px;
 
 $theme-color: #458890;
+$link-color: rgb(91, 115, 255);
+$link-color-hover: rgb(22, 49, 201);
 
 $bg-color: rgb(233, 233, 233);
 $content-bg-color: rgb(255, 255, 255);
@@ -31,6 +33,7 @@ $vnav-link-size: 14px;
 $default-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 $header-title-size: 24px;
+$header-sub-title-size: 14px;
 
 $link-anim-time: 0.1s;
 
