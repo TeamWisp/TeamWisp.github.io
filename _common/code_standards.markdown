@@ -450,6 +450,7 @@ Modern C++11 has special move operations which are designed to enhances the perf
 
 ## References and Further Reading
 
+* [https://github.com/isocpp/CppCoreGuidelines](C++ Core Guidelines) (Very important!)
 * [https://gist.github.com/lefticus/10191322](https://gist.github.com/lefticus/10191322) (Lefticus Source)
  * [http://geosoft.no/development/cppstyle.html](http://geosoft.no/development/cppstyle.html)
  * [http://google-styleguide.googlecode.com/svn/trunk/cppguide.xml](http://google-styleguide.googlecode.com/svn/trunk/cppguide.xml) (Note that google's standard document makes several recommendations which we will NOT be following. For example, they explicitly forbid the use of exceptions, which makes [RAII](http://blog2.emptycrate.com/content/nobody-understands-c-part-2-raii) impossible.)
