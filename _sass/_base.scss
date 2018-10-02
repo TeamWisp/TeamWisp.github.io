@@ -152,6 +152,11 @@ body, html {
     color: $link-color-hover;
 }
 
+.page-content img
+{
+    max-width: 100%;
+}
+
 .site-footer
 {
     border-top: black 1px;
