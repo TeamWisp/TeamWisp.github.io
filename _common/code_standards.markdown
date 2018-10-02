@@ -277,7 +277,7 @@ if (x && y && MyFunctionThatReturnsBool()
 ```
 
 ### Initialize Member Variables
-...with the member initializer list
+...with the member initializer list. And do it in the order the variables are declared.
 
 ```cpp
 // Bad Idea
