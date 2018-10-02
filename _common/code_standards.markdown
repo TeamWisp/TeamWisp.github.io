@@ -227,7 +227,8 @@ for (int i = 0; i < 15; ++i)
 // Good Idea
 // It's clear which statements are part of the loop (or if block, or whatever)
 int sum = 0;
-for (int i = 0; i < 15; ++i) {
+for (int i = 0; i < 15; ++i)
+{
   ++sum;
   std::cout << i << std::endl;
 }
@@ -238,14 +239,16 @@ for (int i = 0; i < 15; ++i) {
 ```cpp
 // Bad Idea
 // hard to follow
-if (x && y && MyFunctionThatReturnsBool() && caseNumber3 && (15 > 12 || 2 < 3)) { 
+if (x && y && MyFunctionThatReturnsBool() && caseNumber3 && (15 > 12 || 2 < 3))
+{ 
 }
 
 // Good Idea
 // Logical grouping, easier to read
 if (x && y && MyFunctionThatReturnsBool() 
     && caseNumber3 
-    && (15 > 12 || 2 < 3)) { 
+    && (15 > 12 || 2 < 3))
+{ 
 }
 ```
 
