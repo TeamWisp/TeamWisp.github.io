@@ -318,7 +318,7 @@ This:
 // some header file
 class MyClass;
 
-void doSomething(const MyClass &);
+void DoSomething(const MyClass &);
 ```
 
 instead of:
@@ -327,7 +327,7 @@ instead of:
 // some header file
 #include "MyClass.hpp"
 
-void doSomething(const MyClass &);
+void DoSomething(const MyClass &);
 ```
 
 This is a proactive approach to simplify compilation time and rebuilding dependencies.
