@@ -16,7 +16,7 @@ Laura de Looff | Production
 Viktor Zoutman | Lead Developer | 06 1234567 | 160348
 Meine Zeinstra | Graphics
 Tahar Meijs | Graphics
-Niels | Graphics
+Niels Brunekreef | Graphics
 Koen Buitenhuis | Graphics
 Florian Schut | Graphics
 Max Ossadtchii | Engine
