@@ -142,6 +142,7 @@ body, html {
     max-width: 800px;
     width: 100%;
     margin: $margin;
+	line-height: $content-line-height;
 }
 
 .page-content h1 {
