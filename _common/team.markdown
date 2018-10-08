@@ -26,4 +26,4 @@ Kay Giesbers | Engine
 
 Name | Role
 -|-
-Erick | Houdini Expert
+Erik | Houdini Expert
