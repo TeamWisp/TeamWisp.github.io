@@ -20,7 +20,7 @@ Niels Brunekreef | Graphics
 Koen Buitenhuis | Graphics
 Florian Schut | Graphics
 Max Ossadtchii | Engine
-Kay | Engine
+Kay Giesbers | Engine
 
 ## External People
 
