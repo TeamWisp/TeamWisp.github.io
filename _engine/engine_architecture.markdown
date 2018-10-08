@@ -4,22 +4,32 @@ title:  "Architecture"
 date:   2018-09-27 11:43:16 +0200
 category: common
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+## High Level
 
-Jekyll also offers powerful support for code snippets:
+We choose to go for a very "simple stupid" approach to the architectural design. We desided to do this to reduce scope, allow for high performance code which allows for rapid itteration.
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+![High Level UML Diagram](../images/high_uml.png)
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+Let's start at the top. We have a engine project which handles stuff like the scene and handles the game logic.
 
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+Than we have a set of "systems" which are the building blocks for the engine. For example the engine is in charge of building a scene graph and a frame graph which get passed to the render system using the high level interface of the render system.
+
+The render system than does all the rendering work using a low level graphics API and the Utility library.
+
+Those systems are constructed upon a utility library which contains stuff like thread management.
+
+## Low Level
+
+### Dependencies
+
+* Assimp
+* BGFX
+* FG
+* Bullet Physics 3
+* FMOD
+* Entt
+* Game Code 4 Resource Manager
+* Gainput
+
+![Low Level UML Diagram](../images/low_uml.jpg)
