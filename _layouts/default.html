@@ -36,9 +36,17 @@
             </div>
 
 			<script>
+				// pre load
 				var vnav = document.getElementById("max-page-height");
 				var new_height = $( document ).height() - 50;
 				vnav.style.height = String(new_height) + "px";
+				
+				// after load
+				window.onload = function () { 
+					var vnav = document.getElementById("max-page-height");
+					var new_height = $( document ).height() - 50;
+					vnav.style.height = String(new_height) + "px";
+				}
 			</script>
             <!--{% include footer.html %}-->
         </div>

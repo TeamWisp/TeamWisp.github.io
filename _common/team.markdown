@@ -8,18 +8,18 @@ weight: 90
 
 ## Core Team
 
-Name | Role | Phone
+Name | Role | Phone | School ID
 -|-
-Emilio | Project Lead
-Jens | Scrum Master
-Laura | Production
-Viktor | Lead Developer | 06 1234567
-Meine | Graphics
-Tahar | Graphics
+Emilio Laiso | Project Lead
+Jens Hagen | Scrum Master
+Laura de Loff | Production
+Viktor Zoutman | Lead Developer | 06 1234567 | 160348
+Meine Zeinstra | Graphics
+Tahar Meijs | Graphics
 Niels | Graphics
-Koen | Graphics
-Florian | Graphics
-Max | Engine
+Koen Buitenhuis | Graphics
+Florian Schut | Graphics
+Max Ossadtchii | Engine
 Kay | Engine
 
 ## External People
