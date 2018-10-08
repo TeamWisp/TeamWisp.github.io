@@ -12,7 +12,7 @@ Name | Role | Phone | School ID
 -|-
 Emilio Laiso | Project Lead
 Jens Hagen | Scrum Master
-Laura de Loff | Production
+Laura de Looff | Production
 Viktor Zoutman | Lead Developer | 06 1234567 | 160348
 Meine Zeinstra | Graphics
 Tahar Meijs | Graphics
