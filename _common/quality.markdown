@@ -3,7 +3,7 @@ layout: post
 title:  "Quality Assurance"
 date:   2018-09-27 11:43:16 +0200
 permalink: /quality/
-weight: 90
+weight: 80
 ---
 
 ## Unit Tests

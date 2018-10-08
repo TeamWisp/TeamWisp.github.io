@@ -107,7 +107,8 @@ body, html {
     color: $vnav-link-color-hover;
 }
 
-.vertical-nav h1 {
+.vertical-nav h1
+{
     letter-spacing: $base-font-line-spacing;
     color: $vnav-title-color; 
     font-size: $vnav-title-size;

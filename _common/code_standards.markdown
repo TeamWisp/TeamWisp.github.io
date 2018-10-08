@@ -123,30 +123,6 @@ C++ header files should be named `.hpp` NOT `.h`
 
 C++11 introduces `nullptr` which is a special type denoting a null pointer value. This should be used instead of 0 or NULL to indicate a null pointer.
 
-### Comments
-
-Comment blocks should use `//`, not `/* */`. Using `//` makes it much easier to comment out a block of code while debugging.
-
-```cpp
-// this function does something
-int MyFunc()
-{
-}
-```
-
-To comment out this function block during debugging we might do:
-
-```cpp
-/*
-// this function does something
-int MyFunc()
-{
-}
-*/
-```
-
-which would be impossible if the function comment header used `/* */`
-
 ### Never Use `using` In a Header File
 
 This causes the name space you are `using` to be pulled into the namespace of the header file.

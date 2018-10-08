@@ -8,12 +8,12 @@ weight: 90
 
 ## Core Team
 
-Name | Role
+Name | Role | Phone
 -|-
 Emilio | Project Lead
 Jens | Scrum Master
 Laura | Production
-Viktor | Lead Developer
+Viktor | Lead Developer | 06 1234567
 Meine | Graphics
 Tahar | Graphics
 Niels | Graphics
