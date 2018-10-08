@@ -5,6 +5,11 @@ layout: home
 
 ## Getting Started
 
+To get a understanding of what our team is trying to accomplish have a look at the following pages:
+
+* [Engine Overview]({{site.url}}/engine)
+* [Demo Overview]({{site.url}}/demo)
+
 If you are new to the team the following pages are a mandatory read:
 
 * [Setting Up Your Workspace]({{site.url}}/workspace_setup)
@@ -12,7 +17,7 @@ If you are new to the team the following pages are a mandatory read:
 * [Coding Standards]({{site.url}}/code_standards)
 * [Quality Assurance]({{site.url}}/quality)
 
-Recommended for everyone to glance over:
+Recommended for every member to glance over:
 
 * [Wiki Contributions]({{site.url}}/wiki_contributions)
 * [Build Server]({{site.url}}/build_server)
