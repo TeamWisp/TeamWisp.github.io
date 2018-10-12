@@ -10,10 +10,8 @@ For the event of a production member leaving the team we have set up a couple of
 
 ## Team Lead
 
-The responsibilities of the team lead are but not limited to:
-
-* Creating a safe working environment.
-* Keeping a clear vision for the project.
+* Responsible of the quality, coherency and functionality of the product.
+* Responsible of attending the y3 production roundtables. Furthermore, facilitates communication and is responsible for the team.
 
 ## Programming
 
@@ -29,3 +27,5 @@ The responsibilities of the programming lead are but not limited to:
 
 ## Scrum Master
 
+* Ownership and responsibility of individual work, this encompasses the
+* quality, functionality and conformity to vision within the guidelines of the project.
