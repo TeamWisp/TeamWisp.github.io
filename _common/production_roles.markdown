@@ -27,5 +27,5 @@ The responsibilities of the programming lead are but not limited to:
 
 ## Scrum Master
 
-* Ownership and responsibility of individual work, this encompasses the
-* quality, functionality and conformity to vision within the guidelines of the project.
+* Ownership and responsibility of individual work.
+* The quality, functionality and conformity to vision within the guidelines of the project.
