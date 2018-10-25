@@ -22,3 +22,7 @@ Wisp integrates with [Maya/Blender](https://www.autodesk.com/products/maya/overv
 * Accelerated by Mesh Shaders
 * Accelerated by Variable Rate Shading
 * Implemented into Maya/Blender's viewport.
+
+## Unique Selling Points
+
+* 
