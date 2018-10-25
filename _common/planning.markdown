@@ -7,8 +7,6 @@ weight: 50
 
 ## Milestones
 
-
-
 ## Development Plan
 
 ### Block B - Pre-production

@@ -10,16 +10,16 @@ weight: 90
 
 Name | Role | Phone | School ID
 -----|------|-------|----------
-Emilio Laiso | Project Lead
-Jens Hagen | Scrum Master
+Emilio Laiso | Project Lead | +39-3349818115 | 162008
+Jens Hagen | Scrum Master | |162672
 Laura de Looff | Production
 Viktor Zoutman | Lead Developer | 06 50413063 | 160348
-Meine Zeinstra | Graphics
-Tahar Meijs | Graphics
-Niels Brunekreef | Graphics
-Koen Buitenhuis | Graphics
-Florian Schut | Graphics
-Max Ossadtchii | Engine
+Meine Zeinstra | Graphics | | 161619
+Tahar Meijs | Graphics | | 161943
+Niels Brunekreef | Graphics | | 160984
+Koen Buitenhuis | Graphics | | 161563
+Florian Schut | Graphics | | 161638
+Max Ossadtchii | Engine | | 141847
 Kay Giesbers | Engine | | 140450
 
 ## External People

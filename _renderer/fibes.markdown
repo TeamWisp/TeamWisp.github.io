@@ -56,11 +56,13 @@ When a user's yields the task scheduler essentially makes a snapshot of the task
 * [std::thread (Classical Multithreading)](http://www.cplusplus.com/reference/thread/thread/)
 
 ## Conclusion
+
 Fibers in combination with a task-manager is extremely powerful yet simpler to use than normal threading. CPU’s are currently in a transition phase where high core count cpu’s become available to mainstream consumers. Thinking how to parallelize now will give you an edge in the coming years and allow your project to scale more efficiently. 
 
 At the moment of writing this the exact product vision for the Wisp project is still being defined. Thus saying we should or shouldn’t use fibers is a stretch. However, when the product vision is defined and it indicates that parallelization is needed then fibers are the way to go.
 
 ## Sources
+
 * [[0] Parallelizing-the-Naughty-Dog-Engine]()
 * [[1] Fiber (Computer science) Wikipedia page]()
 * [[2] Adam Rosenfield reply on"What is the difference between a thread and a fiber?"]()
