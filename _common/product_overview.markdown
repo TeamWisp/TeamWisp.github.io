@@ -18,7 +18,7 @@ Wisp integrates with [Maya/Blender](https://www.autodesk.com/products/maya/overv
 * Translucent & Transparency
 * GPU Accelerated
 * Realtime rendering
-* Build for NVIDIA RTX.
+* Built for NVIDIA RTX.
 * Accelerated by Mesh Shaders
 * Accelerated by Variable Rate Shading
 * Implemented into Maya/Blender's viewport.
