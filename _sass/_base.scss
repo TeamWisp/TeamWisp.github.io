@@ -154,6 +154,7 @@ body, html {
 {
     color: $link-color;
     text-decoration: none;
+	word-wrap: break-word;
 }
 
 .page-content a:hover

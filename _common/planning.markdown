@@ -5,19 +5,25 @@ permalink: /plan/
 weight: 50
 ---
 
-## Block B - Pre-production
+## Milestones
+
+
+
+## Development Plan
+
+### Block B - Pre-production
 
 Week 1 |
 ------ |
 coming soon |
 
-## Block C - Production
+### Block C - Production
 
 Week 1 |
 ------ |
 coming soon |
 
-## Block D - Production
+### Block D - Production
 
 Week 1 |
 ------ |
