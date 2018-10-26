@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Mesh Shaders &#38; Variable Rate Shading"
+title:  "Mesh Shaders, TSS &#38; VRS"
 category: renderer
 ---
 
@@ -61,6 +61,35 @@ According to NVIDIA it is a easy to implement rendering technique aimed at incre
 * SRV render surfaces with little detail or very smooth surfaces.
 * SRV render the floor and roof since no one ever looks up or down.
 
+## Texture Space Shading
+
+### What is it?
+
+With Texture Space Shading (TSS), objects are shaded in a private coordinate space (a texture space) that is saved to memory, and pixel shaders sample from that space rather than evaluating results directly. With the ability to cache shading results in memory and reuse/resample them, developers can eliminate duplicate shading work or use different sampling approaches that improve quality.
+
+![Texture Space Shading Visualization](../../images/tss.png)
+
+TSS works very well with MIPS. When shading for a pixel, the developer can adjust the mapping into texture space, which MIP level (level of detail) is selected, and consequently exert fine control over shading rate. Because texels at low levels of detail are larger, they cover larger parts of an object and possibly multiple pixels. This means you can achieve VRS with TSS but it isn't as easy to implement nor as efficient. However it does give more flexibility.
+
+### What can we do with it?
+
+* Efficient stereo rendering.
+* Optimize static geometry.
+* Mesh based Variable Rate Shading
+
+### Multi View Rendering
+
+### What is it?
+
+The name already gives it away but Multi View Rendering is used to efficiently draw a scene to multiple viewports even if the origin or direction isn't the same. Turing architecture supports four views while at a API level you can have 32 views. Turing optimally processes triangles and their associated vertex attributes while rendering multiple versions. When accessed via the D3D12 View Instancing API, the developer simply uses the variable SV_ViewID to index different transformation matrices, reference different blend weights, or control any shader behavior they like, that varies depending on which view they are processing.
+
+### What can we do with it?
+
+* Virtual Reality
+* large FOV devices (see image)
+
+![200 Degree HMD Where Two Canted Panels are Used and Benefit from MVR](../../images/mvr.png)
+
 ## Further reading
 
 * [http://hhoppe.com/proj/vdrpm/](http://hhoppe.com/proj/vdrpm/)
@@ -75,8 +104,10 @@ According to NVIDIA it is a easy to implement rendering technique aimed at incre
 * [https://www.tomshardware.com/reviews/nvidia-turing-gpu-architecture-explored,5801-9.html](https://www.tomshardware.com/reviews/nvidia-turing-gpu-architecture-explored,5801-9.html)
 * [https://www.youtube.com/watch?v=LCT7pF6HrIg](https://www.youtube.com/watch?v=LCT7pF6HrIg)
 * [http://on-demand.gputechconf.com/siggraph/2018/video/sig1811-3-christoph-kubisch-mesh-shaders.html](http://on-demand.gputechconf.com/siggraph/2018/video/sig1811-3-christoph-kubisch-mesh-shaders.html)
-
-
+* [https://www.youtube.com/watch?v=Rpy0-q0TyB0](https://www.youtube.com/watch?v=Rpy0-q0TyB0)
+* [https://devblogs.nvidia.com/texture-space-shading/](https://devblogs.nvidia.com/texture-space-shading/)
+* [https://devblogs.nvidia.com/nvidia-turing-architecture-in-depth/](https://devblogs.nvidia.com/nvidia-turing-architecture-in-depth/)
+* [https://www.nvidia.com/content/dam/en-zz/Solutions/design-visualization/technologies/turing-architecture/NVIDIA-Turing-Architecture-Whitepaper.pdf](https://www.nvidia.com/content/dam/en-zz/Solutions/design-visualization/technologies/turing-architecture/NVIDIA-Turing-Architecture-Whitepaper.pdf)
 
 
 

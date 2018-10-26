@@ -23,6 +23,6 @@ If you are new to the team the following pages are a mandatory read:
 Recommended for every member to glance over:
 
 * [Wiki Contributions]({{site.url}}/wiki_contributions)
-* [Build Server]({{site.url}}/build_server)
+* [Build Server](https://jbs1.nhtv.nl:8443)
 
 The side bar contains more information specific to the different team roles.
