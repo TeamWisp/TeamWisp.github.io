@@ -71,7 +71,8 @@ body, html {
     background-color: $vnav-bg-color;
     height: 100%;
     box-shadow: $default-shadow;
-    overflow: hidden;
+    overflow-y: auto;
+	overflow-x: hidden;
     max-width: 400px;
 	bottom: 0;
 }
