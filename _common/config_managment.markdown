@@ -21,9 +21,11 @@ The change-control board is comprised of Emilio (Producer) and Viktor (Tech Lead
 
 Changes must be submitted through the issue tracking functionality on our git page. When submitting a change, estimate the time it would take to make the change, including review of the code for the change and retesting the whole system. In your estimate, include time for dealing with the change’s ripple effect through requirements to design, to code, to test, to changes in the user documentation, etc. Regardless of how optimistic you feel when the change is first suggested, refrain from giving an off-the-cuff estimate. Such estimates are often mistaken by a factor of 2 or more. _(Quote: Code Complete, A Practical Handbook of Software Construction, 2nd Edition by Steve McConnell, Chapter 28.2)_
 
-When submitting a change, write a concise explanation of the change in the title, followed by a time estimation wrapped in square brackets.  
+When submitting a change, write a concise explanation of the change in the title, followed by a time estimation wrapped in square brackets. See the following example:
 
-**I.E.**: Re-designing Memory Manager [8h]
+```
+Re-designing Memory Manager [8H 30M]
+```
 
 Go into more details on what parts you want to change and why inside the comment itself.  
 
