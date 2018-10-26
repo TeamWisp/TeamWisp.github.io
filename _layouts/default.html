@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   {% include head.html %}
-  <body>
+  <body onresize="OnResize()">
         {% include header.html %}
         <div class="wrapper">
             <div class="vertical-nav" id="max-page-height">
@@ -43,6 +43,12 @@
 				
 				// after load
 				window.onload = function () { 
+					var vnav = document.getElementById("max-page-height");
+					var new_height = $( document ).height() - 50;
+					vnav.style.height = String(new_height) + "px";
+				}
+
+				function OnResize () { 
 					var vnav = document.getElementById("max-page-height");
 					var new_height = $( document ).height() - 50;
 					vnav.style.height = String(new_height) + "px";
