@@ -1,6 +1,10 @@
 ---
 title: Introduction
 layout: home
+todo:
+ - Renderer architecture
+ - Scene graph explenation
+ - Frame Graph explenation
 ---
 
 ## Getting Started
