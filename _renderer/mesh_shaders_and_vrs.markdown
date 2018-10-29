@@ -71,10 +71,13 @@ With Texture Space Shading (TSS), objects are shaded in a private coordinate spa
 
 TSS works very well with MIPS. When shading for a pixel, the developer can adjust the mapping into texture space, which MIP level (level of detail) is selected, and consequently exert fine control over shading rate. Because texels at low levels of detail are larger, they cover larger parts of an object and possibly multiple pixels. This means you can achieve VRS with TSS but it isn't as easy to implement nor as efficient. However it does give more flexibility.
 
+In theory this technique could be used before Turing. Bud Turing makes it fast enough for it to be viable.
+
 ### What can we do with it?
 
+Because when using normal rasterization a lot of the fragments don't have to be sampled due to culling. This isn't the case for TSS. This makes TSS only really viable for stereo/panorama rendering.
+
 * Efficient stereo rendering.
-* Optimize static geometry.
 * Mesh based Variable Rate Shading
 
 ### Multi View Rendering

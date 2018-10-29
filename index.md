@@ -9,7 +9,7 @@ todo:
 
 ## Getting Started
 
-To get a understanding of what our team is trying to accomplish have a look at the following page:
+We are a group of students from the Breda University of Applied Sciences working on awesome tech using the newest NVIDIA hardware. If you are interested to learn what our team is building during this 1  year project have a look at the following page:
 
 * [Product Overview]({{site.url}}/product)
 

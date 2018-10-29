@@ -81,9 +81,11 @@ All folders should be named in `snake_case` style.
 #### Naming Convention
 
  * Types and functions start with capitals: `MyClass` & `MyMethod` *(PascalCase)*
- * variables start with lower case: `unsigned myVarianble = 0;` *(lowerCamelCase)*
+ * variables are completely lower case separated by underscores: `unsigned my_var = 0;` *(snake_case)*
  * static global constants are all capital: `const int PI=3.1415;`
  * Enum types are all capitals: `enum class Weather { RAINY, COUDY };`
+
+ Why do we use snake_case instead of camelCase? A lot of the resources online use camelCase thus when copying code you have to make changes to it fits the style guide. While your changing the copied code you'll have a high chance of finding inefficiencies or ugly code. Of course copying code from the internet should be avoided but we can't control that.
 
 #### Distinguish Private Object Data
 
