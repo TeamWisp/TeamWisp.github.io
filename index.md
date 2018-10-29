@@ -2,8 +2,8 @@
 title: Introduction
 layout: home
 todo:
- - Renderer architecture
- - Scene graph explenation
+ - Group Research
+ - Better Planning
  - Frame Graph explenation
 ---
 

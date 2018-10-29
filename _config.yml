@@ -37,6 +37,8 @@ collections:
     output: true
   renderer:
     output: true    
+  research:
+    output: true  
 
 # Build settings
 markdown: kramdown
