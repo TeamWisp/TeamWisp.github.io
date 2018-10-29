@@ -6,7 +6,7 @@ weight: 8
 ---
 
 Wisp is an advanced real-time ray tracing renderer build for the demands of video game artists.
-Wisp integrates with [Maya/Blender](https://www.autodesk.com/products/maya/overview) to give the user a realtime in-viewport representation of the final product.
+Wisp integrates with [Maya](https://www.autodesk.com/products/maya/overview) to give the user a realtime in-viewport representation of the final product.
 
 ## Features
 
