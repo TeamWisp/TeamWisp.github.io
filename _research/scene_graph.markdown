@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Scene Graph"
+title:  "Scene Graphs"
 category: renderer
 ---
 
