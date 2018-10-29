@@ -24,6 +24,8 @@ Wisp integrates with [Maya/Blender](https://www.autodesk.com/products/maya/overv
 * Implemented into Maya/Blender's viewport.
 * DLSS
 * Deep learning de-noising
+* Importance based variable rate shading based on the selected object.
+* Dynamic LOD's for non-selected / background objects.
 
 ## Unique Selling Points
 

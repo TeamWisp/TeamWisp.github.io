@@ -28,6 +28,7 @@ collections:
   - common
   - engine
   - renderer
+  - research
 
 collections:
   common:
