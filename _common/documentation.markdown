@@ -17,7 +17,7 @@ It is also possible to visit the version build by the build server [here]().
 
 We use the **Qt Style** to document our code for doxygen. For a in-depth explenation you can check out the [doxygen documentation](http://www.doxygen.nl/manual/docblocks.html)
 
-Commenting class usages, namespaces, functions and member variables should be done in **the header**. Comments about specific code are allowed to be in both header and source files.
+Commenting class usages, namespaces and member variables should be done in **the headers**. Functions should be commented in **the source files**. Comments about specific code are allowed to be in both header and source files.
 
 ## Laying Out Comments
 
