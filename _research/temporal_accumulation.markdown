@@ -44,6 +44,7 @@ foreach pixloc in pixels
 
 
 ## References
+
 * [Presentation](https://youtu.be/MyTOGHqyquU?t=1101)
 * [Adaptive temporal filtering](https://cg.ivd.kit.edu/publications/2018/adaptive_temporal_filtering/adaptive_temporal_filtering.pdf)
 * [Temporal accumulation](https://epubs.surrey.ac.uk/39622/2/accumulation.pdf)
