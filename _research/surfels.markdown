@@ -4,6 +4,8 @@ title:  "Surfels and Spatial Storage"
 category: research 
 ---
 
+![](./../../images/surfels/image9.png)
+
 Introduction
 ============
 
@@ -115,15 +117,14 @@ surfels spawning there, based on only the screen (16x16)-tiles, because
 the distribution of the surfels isn't the same as it is for objects that
 are further away.
 
-![](./media/image7.png){width="2.807292213473316in" height="1.75in"}
+![](./../../images/surfels/image7.png)
 
 A projected pixel area is exactly what it says. Take the images to the
 right as examples. The image is rendered on a window of 7x5 pixels. Each
 green pixel covers a part of the sphere, which is the projected area.
 The lower image shows it even better. The projected area of the pixel
 can be seen on the surface and determines the projected area of the
-pixel.![](./media/image5.png){width="2.901042213473316in"
-height="2.146178915135608in"}
+pixel.![](./../../images/surfels/image5.png)
 
 So, if the projected area of the pixel is too small, the surfel
 placement algorithm takes this into account and won't spawn a lot of
@@ -197,8 +198,7 @@ Gross* explain this tree really well in their research document\[1\].
 LDC stands for Layered Depth Cube and LDI stands for Layered Depth
 Image. A LDC consists of three LDI's. This describes the cube.
 
-![](./media/image3.png){width="2.906836176727909in"
-height="1.890625546806649in"}
+![](./../../images/surfels/image3.png)
 
 They use ray-tracing to create these three LDI's. The LDI's store
 multiple surfels along each ray, one for each ray-surface intersection
@@ -215,8 +215,7 @@ perspective projection and is accelerated by block culling and some
 other techniques (Forward Warping, Visibility Splatting etc. (the
 pipeline can be seen in the image below and is described in the PDF of
 *Pfister*, *Zwicker*, *van Baar*, and
-*Gross*)\[1\]).![](./media/image6.png){width="6.5625in"
-height="1.141304680664917in"}
+*Gross*)\[1\]).![](./../../images/surfels/image6.png)
 
 At each ray intersection point, a surfel is created with floating point
 depth and other shape- and shade- (if implemented) properties.
@@ -248,9 +247,7 @@ normal, color, and radius. When calculating the color bleeding value of
 a specific point, the closest surfels within a certain radius are used
 to determine the color bleeding value.
 
-  ![](./media/image4.png){width="3.1041666666666665in" height="2.5in"}   ![](./media/image8.png){width="3.1041666666666665in" height="2.4722222222222223in"}
-  ---------------------------------------------------------------------- -------------------------------------------------------------------------------------
-  Polygonal mesh                                                         Surfel "mesh"
+![Polygonal mesh](./../../images/surfels/image4.png)  ![Surfel "mesh"](./../../images/surfels/image8.png)                                               
 
 Generating the surfels
 ----------------------
@@ -313,9 +310,7 @@ seen before. The only difference this time is that colors that could
 contribute to the final color are rasterized before applying them to the
 cube map.
 
-  ![](./media/image2.png){width="6.354166666666667in" height="1.5555555555555556in"}
-  ------------------------------------------------------------------------------------
-  Examples from the Pixar "point-based color bleeding" presentation.
+ ![Examples from the Pixar "point-based color bleeding" presentation.](./../../images/surfels/image2.png)
 
 Conclusion
 ==========
