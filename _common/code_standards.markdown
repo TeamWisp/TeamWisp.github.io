@@ -141,6 +141,14 @@ namespace d3d12
 } /* d3d12 */
 ```
 
+### Don't ever use `using namespace std`
+
+Never write `using namespace std`. This is done to keep the code consistent.
+
+### Prefer STL headers over old C headers.
+
+For example you should prefer `std::size_t` over `size_t`. This is done to keep the code consistent.
+
 ### Include Guards
 
 Header files must contain an distinctly named include guard to avoid problems with including the same header multiple times or conflicting with other headers from other projects
@@ -324,6 +332,29 @@ This is a proactive approach to simplify compilation time and rebuilding depende
 ### Always Use Namespaces
 
 There is almost never a reason to declare an identifier in the global namespaces. Instead, functions and classes should exist in an appropriately named namespaces or in a class inside of a namespace. Identifiers which are placed in the global namespace risk conflicting with identifiers from other (mostly C, which doesn't have namespaces) libraries.
+
+### Namespaces In Source Files
+
+Don't do 
+
+```cpp
+void my_namespace::my_nested_namespace::MyClass::MyFunction()
+{
+}
+```
+
+Instead do:
+
+```cpp
+namespace my_namespace::my_nested_namespace
+{
+	
+	void MyClass::MyFunction()
+	{
+	}
+
+} /* my_namespace::my_nested_namespace */
+```
 
 ### Avoid Compiler Macros
 
