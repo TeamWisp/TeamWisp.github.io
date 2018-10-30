@@ -1,9 +1,42 @@
----
-layout: post
-title:  "Surfels and Spatial Storage"
-category: research 
----
-# ![](./../../images/surfels/image9.png)
+![](./media/image9.png){width="4.072916666666667in"
+height="2.3333333333333335in"}
+
+**[Introduction](#introduction) 3**
+
+> [Purpose of this document](#purpose-of-this-document) 3
+>
+> [Previous research](#previous-research) 3
+>
+> [Research questions](#research-questions) 3
+
+**[Definition](#definition) 4**
+
+> [Why surfels?](#why-surfels) 4
+
+**[EA SEED](#ea-seed) 5**
+
+> [Surfel placement](#surfel-placement) 5
+>
+> [Global Illumination](#global-illumination) 6
+
+**[High-level implementation](#high-level-implementation) 7**
+
+> [LDI/LDC Tree](#ldildc-tree) 7
+
+**[Point-based approximate color
+bleeding](#point-based-approximate-color-bleeding) 9**
+
+> [Generating the surfels](#generating-the-surfels) 9
+>
+> [Calculating color bleeding](#calculating-color-bleeding) 10
+
+**[Conclusion](#conclusion) 11**
+
+> [Risk analysis](#risk-analysis) 11
+>
+> [Time estimation](#time-estimation) 11
+
+**[References](#references) 12**
 
 Introduction
 ------------
@@ -111,14 +144,15 @@ surfels spawning there, based on only the screen (16x16)-tiles, because
 the distribution of the surfels isn't the same as it is for objects that
 are further away.
 
-![](./../../images/surfels/image3.png)
+![](./media/image3.png){width="2.807292213473316in" height="1.75in"}
 
 A projected pixel area is exactly what it says. Take the images to the
 right as examples. The image is rendered on a window of 7x5 pixels. Each
 green pixel covers a part of the sphere, which is the projected area.
 The lower image shows it even better. The projected area of the pixel
 can be seen on the surface and determines the projected area of the
-pixel.![](./../../images/surfels/image4.png)
+pixel.![](./media/image4.png){width="2.901042213473316in"
+height="2.146178915135608in"}
 
 So, if the projected area of the pixel is too small, the surfel
 placement algorithm takes this into account and won't spawn a lot of
@@ -190,7 +224,8 @@ Gross* explain this tree really well in their research document\[1\].
 LDC stands for Layered Depth Cube and LDI stands for Layered Depth
 Image. A LDC consists of three LDI's. This describes the cube.
 
-![](./../../images/surfels/image5.png)
+![](./media/image5.png){width="2.906836176727909in"
+height="1.890625546806649in"}
 
 They use ray-tracing to create these three LDI's. The LDI's store
 multiple surfels along each ray, one for each ray-surface intersection
@@ -207,7 +242,8 @@ perspective projection and is accelerated by block culling and some
 other techniques (Forward Warping, Visibility Splatting etc. (the
 pipeline can be seen in the image below and is described in the PDF of
 *Pfister*, *Zwicker*, *van Baar*, and
-*Gross*)\[1\]).![](./../../images/surfels/image7.png)
+*Gross*)\[1\]).![](./media/image7.png){width="6.5625in"
+height="1.141304680664917in"}
 
 At each ray intersection point, a surfel is created with floating point
 depth and other shape- and shade- (if implemented) properties.
@@ -239,8 +275,10 @@ normal, color, and radius. When calculating the color bleeding value of
 a specific point, the closest surfels within a certain radius are used
 to determine the color bleeding value.
 
-![Polygonal mesh](./../../images/surfels/image2.png) ![Surfel "mesh"](./../../images/surfels/image8.png)
-                                                         
+  ![](./media/image2.png){width="3.1041666666666665in" height="2.5in"}   ![](./media/image8.png){width="3.1041666666666665in" height="2.4722222222222223in"}
+  ---------------------------------------------------------------------- -------------------------------------------------------------------------------------
+  Polygonal mesh                                                         Surfel "mesh"
+
 ### Generating the surfels
 
 Using surfels for global illumination requires at least two passes. The
@@ -300,7 +338,9 @@ seen before. The only difference this time is that colors that could
 contribute to the final color are rasterized before applying them to the
 cube map.
 
-![Examples from the Pixar "point-based color bleeding" presentation.](./../../images/surfels/image6.png)
+  ![](./media/image6.png){width="6.354166666666667in" height="1.5555555555555556in"}
+  ------------------------------------------------------------------------------------
+  Examples from the Pixar "point-based color bleeding" presentation.
 
 Conclusion
 ----------
@@ -503,4 +543,3 @@ Retrieved from
 > Retrieved from
 >
 > [[https://twitter.com/tankiistanki]{.underline}](https://twitter.com/tankiistanki)
-
