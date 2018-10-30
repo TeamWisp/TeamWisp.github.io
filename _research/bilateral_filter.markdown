@@ -41,7 +41,7 @@ Where the weight of all the pixels used for normalization is
 
 For the rest of the variables
 
-$$I\tiny{filtered}$$ is the filtered image
+$$I\small{filtered}$$ is the filtered image
 
 $$I$$ is the input image
 
@@ -49,15 +49,15 @@ $$\omega$$ is the texture to denoise centered at x
 
 $$x$$ are the coordinates of the pixel currently being filtered
 
-$$fr$$ is the range kernel for color similarity
+$$r\small{s}$$ is the range kernel for color similarity
 
-$$gs$$  is the range kernel for geometric closeness
+$$g\small{s}$$  is the range kernel for geometric closeness
 
-When we use Gaussian functions for fr and gs we can define the weight of a pixel as
+When we use Gaussian functions for $$f\small{s}$$ and $$g\small{s}$$ we can define the weight of a pixel as
 
 ![](../../images/bf/image3.png)
 
-In this, i and j are the coordinates of the input pixel and k and l are coordinates of a nearby pixel. σd and σr are the standard deviations of the function which can be used to alter the filtering characteristics. Once you apply this weight to the equation mentioned before you can get the filtered pixel with the function on the bellow. 
+In this, i and j are the coordinates of the input pixel and k and l are coordinates of a nearby pixel. $$\sigma \small{r}$$ and $$\sigma \small{d}$$ are the standard deviations of the function which can be used to alter the filtering characteristics. Once you apply this weight to the equation mentioned before you can get the filtered pixel with the function on the bellow. 
 
 ![](../../images/bf/image4.png)
 
