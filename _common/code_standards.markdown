@@ -129,6 +129,17 @@ C++11 introduces `nullptr` which is a special type denoting a null pointer value
 
 This causes the name space you are `using` to be pulled into the namespace of the header file.
 
+### Namespace Closing Curly Brace Comment
+
+The closing brace of a namespace should be commented with the name of the namespace.
+For example:
+
+```cpp
+namespace d3d12
+{
+	// ...
+} /* d3d12 */
+```
 
 ### Include Guards
 
