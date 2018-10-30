@@ -4,7 +4,7 @@ title:  "Surfels and Spatial Storage"
 category: research 
 ---
 
-![](./../../images/surfels/image9.png)
+# ![](./../../images/surfels/image9.png)
 
 Introduction
 ============
