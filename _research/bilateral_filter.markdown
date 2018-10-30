@@ -35,10 +35,6 @@ The formula for a filtered pixel as proposed by Tomasi and Manduchi is written t
 
 ![](../../images/bf/image0.png)
 
-$$
-dispaly
-$$
-
 Where the weight of all the pixels used for normalization is
 
 ![](../../images/bf/image1.png)
