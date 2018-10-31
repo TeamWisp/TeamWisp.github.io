@@ -73,6 +73,8 @@ body
 
 .vertical-nav
 {
+		margin-top: 20px;
+	margin-left: 20px;
     background-color: $vnav-bg-color;
     height: 100%;
     box-shadow: $default-shadow;
@@ -84,8 +86,6 @@ body
 
 .vertical-nav li
 {
-	margin-top: 20px;
-	margin-left: 20px;
     padding-left: 20px;
     margin-right: -20px;
     white-space: nowrap;
