@@ -8,6 +8,11 @@ body, html {
     height: 100%;
 }
 
+body
+{
+	margin: 20px 20px 20px 20px;
+}
+
 .wrapper
 {
     margin-top: 50px; /* absolute header offset */
@@ -79,6 +84,8 @@ body, html {
 
 .vertical-nav li
 {
+	margin-top: 20px;
+	margin-left: 20px;
     padding-left: 20px;
     margin-right: -20px;
     white-space: nowrap;
