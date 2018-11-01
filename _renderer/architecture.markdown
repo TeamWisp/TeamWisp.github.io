@@ -36,6 +36,12 @@ Resource pools store and load resources in a efficient manner for you. It is rec
 
 Implementing a resource pool for your specific graphics API is done by implementing the `Load`, `Evict` and `MakeResident` virtual functions. The user can create  a resource pool by calling `CreateResourcePool` on the render system. Note that the render system doesn't store the resource pool.
 
+The idea is that the graphics API specific implementation creates a heap and allocates resources into that heap. If your graphics API doesn't support this behaviour you can just implement it the old fashioned way.
+
+Here is a UML diagram of 2 types of pools:
+
+![](../../images/rs_uml.png)
+
 ### Frame Graph
 
 We use a custom implementation of the frostbite frame graph system. We choose to go custom to reduce overhead since we don't need a lot of the frostbite features since our scope is way smaller.
