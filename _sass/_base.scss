@@ -8,11 +8,6 @@ body, html {
     height: 100%;
 }
 
-body
-{
-	margin: 20px 20px 20px 20px;
-}
-
 .wrapper
 {
     margin-top: 50px; /* absolute header offset */
@@ -73,8 +68,6 @@ body
 
 .vertical-nav
 {
-		margin-top: 20px;
-	margin-left: 10px;
     background-color: $vnav-bg-color;
     height: 100%;
     box-shadow: $default-shadow;
