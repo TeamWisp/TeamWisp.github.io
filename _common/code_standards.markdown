@@ -7,6 +7,8 @@ permalink: /code_standards/
 weight: 10
 ---
 
+The following coding standard is a modified version of Lefticus coding standard available on [github](https://gist.github.com/lefticus/10191322) and the [C++ Code Guidelines](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md).
+
 ## Table of Content
 
 * [Automated Code Analysis](#automated-code-analysis)
@@ -64,7 +66,7 @@ This is not required for every programmer to use. We'll run this every now and t
 ### Ignoring Warnings
 
 If it is determined by team consensus that the compiler or analyzer is warning on something that is either incorrect or unavoidable, the team will disable the specific error to as localized part of the code as possible.
-
+#pragma once
 ### Unit Tests
 
 There should be a test enabled for every feature or bug fix that is committed. See also "Code Coverage Analysis."
@@ -143,19 +145,18 @@ namespace d3d12
 
 ### Don't ever use `using namespace std`
 
-Never write `using namespace std`. This is done to keep the code consistent.
+Never write `using namespace std`. This is done to keep the code consistent. For example some where in your code you might read `std::vector` or `vector` which is inconsistent. Also this prevents you from having the think about whether `using namesapce std` is used when modifying a part of the code base you didn't write.
 
 ### Prefer STL headers over old C headers.
 
-For example you should prefer `std::size_t` over `size_t`. This is done to keep the code consistent.
+For example you should prefer `std::size_t` over `size_t`. This is done to keep the code consistent with the STL.
 
 ### Include Guards
 
-Header files must contain an distinctly named include guard to avoid problems with including the same header multiple times or conflicting with other headers from other projects
+We don't use the old school include guards. Even though `#pragma once` isn't part of the standard it is adopted widely enough that we don't have to worry about it. Especially since our graphics API is DirectX12 which only runs on windows and only compiles using MSVC (and clang and GCC with some work).
 
 ```cpp
-#ifndef MYPROJECT_MYCLASS_HPP
-#define MYPROEJCT_MYCLASS_HPP
+#pragma once
 
 namespace MyProject
 {
@@ -327,7 +328,7 @@ instead of:
 void DoSomething(const MyClass &);
 ```
 
-This is a proactive approach to simplify compilation time and rebuilding dependencies.
+This is a proactive approach to speeding-up compilation times.
 
 ### Always Use Namespaces
 
@@ -503,8 +504,8 @@ Modern C++11 has special move operations which are designed to enhances the perf
 
 ## References and Further Reading
 
-* [https://github.com/isocpp/CppCoreGuidelines](C++ Core Guidelines) (Very important!)
-* [https://gist.github.com/lefticus/10191322](https://gist.github.com/lefticus/10191322) (Lefticus Source)
+* [https://github.com/isocpp/CppCoreGuidelines](C++ Core Guidelines)
+* [https://gist.github.com/lefticus/10191322](https://gist.github.com/lefticus/10191322)
  * [http://geosoft.no/development/cppstyle.html](http://geosoft.no/development/cppstyle.html)
  * [http://google-styleguide.googlecode.com/svn/trunk/cppguide.xml](http://google-styleguide.googlecode.com/svn/trunk/cppguide.xml) (Note that google's standard document makes several recommendations which we will NOT be following. For example, they explicitly forbid the use of exceptions, which makes [RAII](http://blog2.emptycrate.com/content/nobody-understands-c-part-2-raii) impossible.)
  * [http://www.parashift.com/c++-faq/](http://www.parashift.com/c++-faq/)
