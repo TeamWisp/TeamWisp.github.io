@@ -2,11 +2,14 @@
 layout: post 
 title: "Detailed Feature List"
 category: renderer
+permalink: /feature_list/
 ---
 
 This is a list of all the features. This document is a reference for when we are planning and dividing work.
 
 ## High Level Features
+
+**Cirtical Features:**
 
 * Deferred Rendering
 * Skybox Rendering
@@ -28,16 +31,20 @@ This is a list of all the features. This document is a reference for when we are
 	* Ambient Occlusion
 * Physically Based Rendering
 * Acceleration Structure Generation From Scene Graph
-* DLSS
-* Deep learning de-noising
 * Maya Viewport Plugin
 * Maya Scene Graph Conversion To Wisp Scene Graph
+* ImGui
+	* Standalone
+
+**Non-Cirtical Features:**
+
 * SRV Accelerate everything but the selected object.
 * Mesh Shader LOD generation.
 * HDR Rendering
+* Deep learning de-noising
+* DLSS
 * Signed Distance Functions
 	* Raytracing SDF's
 	* SDF Maya Editor
 * ImGui
-	* Standalone
-	* Maya viewport
+	* Maya Viewport

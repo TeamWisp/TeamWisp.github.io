@@ -10,6 +10,8 @@ Wisp integrates with [Maya](https://www.autodesk.com/products/maya/overview) to 
 
 ## Features
 
+You can find a more detailed list [here]({{site.url}}/feature_list) which also separates the tasks into critical and non-critical.
+
 * Global Illumination
 * Ambient Occlusion
 * Reflections

@@ -2,6 +2,7 @@
 layout: post
 title:  "Architecture"
 category: renderer
+permalink: /architecture/
 ---
 
 ## Project Structure

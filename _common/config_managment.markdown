@@ -2,7 +2,7 @@
 layout: post
 title:  "Configuration Management"
 date:   2018-09-27 11:43:16 +0200
-permalink: /config/
+permalink: /config_management/
 weight: 100
 ---
 

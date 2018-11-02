@@ -18,11 +18,14 @@ If you are new to the team the following pages are a mandatory read:
 * [Setting Up Your Workspace]({{site.url}}/workspace_setup)
 * [Development Pipeline]({{site.url}}/dev_pipeline)
 * [Coding Standards]({{site.url}}/code_standards)
+* [Documentation Standards]({{site.url}}/docs)
 * [Quality Assurance]({{site.url}}/quality)
 
 Recommended for every member to glance over:
 
 * [Wiki Contributions]({{site.url}}/wiki_contributions)
+* [Renderer Architecture]({{site.url}}/architecture)
+* [Configuration Management]({{site.url}}/config_management)
 * [Build Server](https://jbs1.nhtv.nl:8443)
 
 The side bar contains more information specific to the different team roles.
