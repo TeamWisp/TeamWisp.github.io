@@ -9,9 +9,10 @@ weight: 0
 ## Prerequisites
 
 * Git
-* Visual Studio 15 2017
+* Visual Studio 15.9
+* Windows SDK 10.0.17763.0
+* Maya 2018
 * [Static Code Analyzer]({{site.url}}/code_standards/#automated-code-analysis) *(or MSVC's `/analyze`)*
-* FMOD *(Optional)*
 
 ## Installation
 
