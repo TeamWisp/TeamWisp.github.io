@@ -12,6 +12,7 @@ weight: 0
 * Visual Studio 15.9
 * Windows SDK 10.0.17763.0
 * Maya 2018
+* Feature Level 12.1 Capable Hardware
 * [Static Code Analyzer]({{site.url}}/code_standards/#automated-code-analysis) *(or MSVC's `/analyze`)*
 
 ## Installation
