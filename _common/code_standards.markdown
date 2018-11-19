@@ -66,7 +66,7 @@ This is not required for every programmer to use. We'll run this every now and t
 ### Ignoring Warnings
 
 If it is determined by team consensus that the compiler or analyzer is warning on something that is either incorrect or unavoidable, the team will disable the specific error to as localized part of the code as possible.
-#pragma once
+
 ### Unit Tests
 
 There should be a test enabled for every feature or bug fix that is committed. See also "Code Coverage Analysis."
@@ -166,8 +166,6 @@ namespace MyProject
   };
 
 }
-
-#endif
 ```
 
 ### Put braces on a new line
