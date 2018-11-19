@@ -9,7 +9,9 @@ weight: 0
 ## Prerequisites
 
 * Git
+* Windows 10 (1803 or higher)
 * Visual Studio 15.9
+* CMake 3.12.4 or higher
 * Windows SDK 10.0.17763.0
 * Maya 2018
 * Feature Level 12.1 Capable Hardware
