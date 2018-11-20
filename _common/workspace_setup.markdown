@@ -21,7 +21,7 @@ weight: 0
 
 1. Open CMD or Powershell in the installation directory of your choice. 
 1. `git clone https://github.com/TeamWisp/Procedural-Ray-Tracing.git` (Clones the repository in a foler named Procedural-Ray-Tracing. To specify a different directory add a space to the end of the command followed by your prefered path)
-1. Run `install.sh`
+1. Run `install.bat`
 1. The project files are located in `build_[compiler]_[platform]`
 
 **Optional:**
