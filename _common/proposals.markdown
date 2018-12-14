@@ -7,7 +7,11 @@ weight: 8
 permalink: /proposals/
 ---
 
-## The format
+## The Goal
+
+The goal is to set clear research guidelines and allow any team member to implement a proposal. The format below is written to force the author to truely think about how the feature would work and would be implemented into the renderer.
+
+## The Format
 
 ```markdown
 # Proposal
