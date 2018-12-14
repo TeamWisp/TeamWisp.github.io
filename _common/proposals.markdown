@@ -56,8 +56,4 @@ expected visual changes?
 ### Subtask 2
 
 // ... etc
-
-
-
-
 ```
