@@ -48,6 +48,10 @@ How long with this take and why.
 expected performance impact?
 expected visual changes?
 
+#### Proposed Implementation
+
+Here go into a bit more detail on how we should implement it. Add some code snippets and some pseudo code for example.
+
 #### What files need to be modified.
 
 * d3d12_xxx.cpp
