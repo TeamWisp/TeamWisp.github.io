@@ -12,6 +12,9 @@ permalink: /proposals/
 ```markdown
 # Proposal
 
+**Date:** [Day/Month/Year]
+**Author:** [Author]
+
 ## Introduction
 
 What is the task and how does it work.
