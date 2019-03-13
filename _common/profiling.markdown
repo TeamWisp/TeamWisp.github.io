@@ -5,22 +5,49 @@ permalink: /profiling/
 weight: 50
 ---
 
-Every build the build system runs a set of tests which meassure performance. If there is a massive drop in performance a message will be send to Discord.
+For presentations, community items and keeping our renderer high performance we require to profile our work regularly. Before creating a pull request please compare performance with the master branch.
 
-In-depth manual profiling happens at the end of every block where production stagnates anyway. The profiling is performed by a group of about 3 people who are proficient at profiling. Their task is to find any poorly performing systems and devised a action plan on how to make said system more performant. We don't have a standardized profiling application. Use whatever you are most proficient in.
+## Setting up the renderer for profiling
 
-## GPU Profilers
+* Switch to Release mode.
+* Disable the debug layer.  (`d3d12_settings.hpp`)
+* Disable the debug factory. (`d3d12_settings.hpp`)
+* Make sure the other settings (`d3d12_settings.hpp` and `settings.hpp`) are the same across the 2 branches you are comparing.
+* Make sure the settings of `rt_global.hlsl` match across the branches.
+* When profiling in-engine (which is less accurate) don't run the application attached to the debugger.
+
+## Scenes
+
+When meassuring for a presentation you want to pick a scene that is most interesting for the feature you are meassuring.
+
+However when meassuring for pull requests we want to have a standardized benchmark scene. We will introduce such scene soon. Currently benchmarking Viknell with a camera position of `{0, 0, -1.5}` will suffice. (The camera position ensures no primary rays are missed)
+
+## Numbers
+
+Frame time can introduce a large error margin. To reduce this don't meassure the frame time but meassure the passess your code has affected instead. For example in NSight:
+
+![](../images/nsight.png)
+
+In the range profiler view you can very easily see that the ray tracing in this case `DispatchRays` takes 2.35 ms and compositing (the `Dispatch` call) 0.22 ms.
+
+## Build-in profiler
+
+The build in editor can be used to look for massive differences in performance and often is good enough for testing a pull request. However it does not suffice for meassurements for presentations. The error margin is far to high.
+
+## Tools
+
+### GPU Profilers
 
 * Render Doc
 * NVIDIA Nsight
 * Visual Studio Profiler & Debugger
 
-## CPU Profilers
+### CPU Profilers
 
 * VTune
 * Visual Studio Profiler
 
-## Memory Profilers
+### Memory Profilers
 
 * Visual Studio Profiler
 * Valgrind
