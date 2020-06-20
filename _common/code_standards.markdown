@@ -93,26 +93,22 @@ All folders should be named in `snake_case` style.
 
 Name private data with a `m_` prefix to distinguish it from public data.
 
-#### Distinguish Function Parameters
-
-Name function parameters with an `t_` prefix.
-
 #### Well formed example
 
 ```cpp
 class MyClass
 {
 public:
-  MyClass(int t_data)
-    : m_data(t_data)
+  MyClass(int data)
+    : m_data(data)
   {
   }
-  
+
   int GetData() const
   {
     return m_data;
   }
-  
+
 private:
   int m_data;
 };
@@ -183,26 +179,26 @@ int MyFuncton()
 ```cpp
 // Bad Idea
 int MyFuncton() {
-  
+
 }
 ```
 
-### 4 spaces indent level. 
+### 4 spaces indent level.
 
 Spaces are not allowed, and a mixture of tabs and spaces is strictly forbidden. Modern autoindenting IDEs and editors require a consistent standard to be set.
 
 ```cpp
 // Good Idea
-int MyFunction(bool t_b)
+int MyFunction(bool b)
 {
-    if (t_b)
+    if (b)
     {
         // do something
     }
 }
 ```
 
-### {} are required for blocks. 
+### {} are required for blocks.
 Leaving them off can lead to semantic errors in the code.
 
 ```cpp
@@ -218,8 +214,8 @@ int sum = 0;
 for (int i = 0; i < 15; ++i)
   ++sum;
   std::cout << i << std::endl;
-  
-  
+
+
 // Good Idea
 // It's clear which statements are part of the loop (or if block, or whatever)
 int sum = 0;
@@ -236,15 +232,15 @@ for (int i = 0; i < 15; ++i)
 // Bad Idea
 // hard to follow
 if (x && y && MyFunctionThatReturnsBool() && caseNumber3 && (15 > 12 || 2 < 3))
-{ 
+{
 }
 
 // Good Idea
 // Logical grouping, easier to read
-if (x && y && MyFunctionThatReturnsBool() 
-    && caseNumber3 
+if (x && y && MyFunctionThatReturnsBool()
+    && caseNumber3
     && (15 > 12 || 2 < 3))
-{ 
+{
 }
 ```
 
@@ -259,7 +255,7 @@ if (x && y && MyFunctionThatReturnsBool()
 #include <includes/MyHeader.hpp>
 
 // Worse Idea
-// requires potentially even more specific -I directives and 
+// requires potentially even more specific -I directives and
 // makes code more difficult to package and distribute
 #include <string>
 #include <MyHeader.hpp>
@@ -280,9 +276,9 @@ if (x && y && MyFunctionThatReturnsBool()
 class MyClass
 {
 public:
-  MyClass(int t_value)
+  MyClass(int value)
   {
-    m_value = t_value;
+    m_value = value;
   }
 
 private:
@@ -292,13 +288,13 @@ private:
 
 // Good Idea
 // C++'s memeber initializer list is unique to the language and leads to
-// cleaner code and potential performance gains that other languages cannot 
+// cleaner code and potential performance gains that other languages cannot
 // match
 class MyClass
 {
 public:
-  MyClass(int t_value)
-    : m_value(t_value)
+  MyClass(int value)
+    : m_value(value)
   {
   }
 
@@ -334,7 +330,7 @@ There is almost never a reason to declare an identifier in the global namespaces
 
 ### Namespaces In Source Files
 
-Don't do 
+Don't do
 
 ```cpp
 void my_namespace::my_nested_namespace::MyClass::MyFunction()
@@ -347,7 +343,7 @@ Instead do:
 ```cpp
 namespace my_namespace::my_nested_namespace
 {
-	
+
 	void MyClass::MyFunction()
 	{
 	}
@@ -418,7 +414,7 @@ delete myobj;
 
 // Good Idea
 std::shared_ptr<MyClass> myobj = make_shared<MyClass>();
-// ... 
+// ...
 // myobj is automatically freed for you whenever it is no longer used.
 ```
 
@@ -430,7 +426,7 @@ Please no that a smart pointer only shoulbe be passed by reference or const refe
 Global data leads to unintended sideeffects between functions and can make code difficult or impossible to parallelize. Even if the code is not intended today for parallelization, there is no reason to make it impossible for the future.
 
 
-### Prefer pre-increment to post-increment 
+### Prefer pre-increment to post-increment
 ... when it is semantically correct. Pre-increment is [faster](http://blog2.emptycrate.com/content/why-i-faster-i-c) then post-increment because it does not require a copy of the object to be made.
 
 ```cpp
@@ -459,12 +455,12 @@ for (int i = 0; i < 15; ++i)
 class MyClass
 {
 public:
-  MyClass(std::string t_value)
-    : m_value(t_value)
+  MyClass(std::string value)
+    : m_value(value)
   {
   }
 
-  std::string get_value() 
+  std::string get_value()
   {
     return m_value;
   }
@@ -478,8 +474,8 @@ private:
 class MyClass
 {
 public:
-  MyClass(const std::string &t_value)
-    : m_value(t_value)
+  MyClass(const std::string &value)
+    : m_value(value)
   {
   }
 
